@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="channel">
+    <xs:complexType>
+	  <xs:sequence><!--a sequence of channel elements-->
+    	<xs:element name="roomid" type="id"/>
+    	<xs:element name="roomname" type="xs:string"/>
+    	<xs:element name="status" type="status"/>
+    	<xs:element name="nmbofmembers" type="xs:decimal"/>
+	    <xs:element name="members">
+			<xs:complexType>
+			  <xs:sequence><!--a sequence of member elements-->
+			    <xs:element name="member" minOccurs="1" maxOccurs="unbounded">
+				  <xs:complexType>
+				    <xs:sequence><!--a sequence of member data-->
+				    	<xs:element name="firstname" type="xs:string"/>
+				    	<xs:element name="lastname" type="xs:string"/>
+				    	<xs:element name="email" type="email"/>
+				    	<xs:element name="nickname" type="xs:string"/>
+				  	</xs:sequence>
+					<xs:attribute name="id" type="id" use="required"/>
+				  </xs:complexType>
+				</xs:element>
+			  </xs:sequence>
+			</xs:complexType>	  
+		</xs:element>   
+		<xs:element name="messages">
+			<xs:complexType>
+			  <xs:sequence><!--a sequence of message elements-->
+			    <xs:element name="message" minOccurs="5" maxOccurs="unbounded">
+				  <xs:complexType>
+				    <xs:sequence><!--a sequence of message data-->
+				    	<xs:element name="sender" type="xs:string"/> <!--changed: id=>string-->
+				    	<xs:element name="time" type="xs:string"/>
+				    	<xs:element name="date" type="xs:string"/>
+				    	<xs:element name="text" type="xs:string"/>
+				  	</xs:sequence>
+					<xs:attribute name="id" type="xs:decimal" use="required"/>
+					<xs:attribute name="status" type="msgstatus" use="required"/>
+				  </xs:complexType>
+				</xs:element>
+			  </xs:sequence>
+			</xs:complexType>	  
+		</xs:element>
+	  </xs:sequence>
+	</xs:complexType>
+  </xs:element>
+  <xs:simpleType name="id">
+ 	<xs:restriction base="xs:string">
+ 		<xs:pattern value="\d{1,5}" />
+ 	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="status">
+ 	<xs:restriction base="xs:string">
+	  <xs:enumeration value="open" />
+	  <xs:enumeration value="private" />
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="msgstatus">
+ 	<xs:restriction base="xs:string">
+	  <xs:enumeration value="open" />
+	  <xs:enumeration value="deleted" />
+	</xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="email">
+ 	<xs:restriction base="xs:string">
+ 		<xs:pattern value="[^@]+@[^\.]+\..+" />
+ 	</xs:restriction>
+  </xs:simpleType>
+</xs:schema>

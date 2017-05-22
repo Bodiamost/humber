@@ -1,0 +1,74 @@
+<!--NOTE: THIS FILE IS ONLY USED IF YOU SELECT OPTION 2: THE HUMBER CLOCK. IN THIS FILE YOU WILL PUT YOUR <template> INCLUDING ITS STYLING AND LOGIC TO CREATE A CUSTOM MODULE AND ATTACH IT TO THE SHADOW DOM. EXTERNAL FILES NEED TO BE DELIVERED BY A WEB SERVER SO YOU NEED TO SUBMIT A LINK TO YOUR WORKING FILES ONLINE IN YOUR SUBMISSION EMAIL. -->
+
+<!-- HUMBER CLOCK TEMPLATE  -->
+<template id="tmplt_humber_clock">
+    <style>
+        #humber_clock {        	
+            position: relative;
+            width: 350px;
+            height: 200px;
+            background-color: #00275E;
+            border-radius: 15px;
+            border: 5px solid #DEB406;
+        }
+        #humber_clock_header {
+            width: 100%;            
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        #humber_clock_header img {
+            width: 95%;
+            padding: 0 8.75px;
+        }
+        #humber_clock_body {
+        	width: 85%;
+            margin: 7px 26.25px;
+            background-color: white;
+            text-align: center;
+		    font-size: 3rem;
+        }
+        #humber_clock_footer {
+            position: absolute;
+            bottom: 7px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        #humber_clock_footer span {
+            color: #00A2E8;
+            padding: 3.5px 7px;
+            text-transform: uppercase;
+        }
+        #humber_clock_footer span:nth-child(1) {
+            background-color: black;
+        }
+        #humber_clock_footer span:nth-child(2) {
+            background-color: white;
+        }
+    </style>
+    <div id="humber_clock">
+        <div id="humber_clock_header">
+        	<img src="humber-logo.png"/>
+        </div>
+        <div id="humber_clock_body">
+            <slot name="time"></slot>
+        </div>
+        <div id="humber_clock_footer">
+            <strong><span>we are</span><span>futuristic</span></strong>
+        </div>
+    </div>
+</template>
+
+<!-- HUMBER CLOCK CUSTOM MODULE  -->
+<script>
+    var cstmTmplt = document.currentScript.ownerDocument.querySelector('#tmplt_humber_clock');
+
+    var humberClock = Object.create(HTMLElement.prototype);
+
+    humberClock.createdCallback = function() {
+        var root = this.attachShadow({mode: 'open'});
+        root.appendChild(document.importNode(cstmTmplt.content, true));
+    };
+
+    document.registerElement('humber-clock', { prototype: humberClock });
+</script>

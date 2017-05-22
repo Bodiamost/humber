@@ -1,0 +1,8 @@
+{
+    "require": {
+        "google/apiclient": "^2.1",
+        "facebook/graph-sdk": "^5.4",
+        "joshtronic/php-googleplaces": "dev-master",
+        "hownowstephen/php-foursquare": "1.2.0"
+    }
+}

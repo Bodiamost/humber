@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title>CSS Animation</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <header id="header">
+	  <div class="page-wrapper">
+	  	<div id="name-and-desc">
+		  <h2 id="name">Bohdan Mostytskyy</h2>
+		  <p id="desc">Animation</p>
+	     </div>
+		<nav id="main-menu">
+		  <h2 class="hidden">Main menu</h2>
+          <ul>	
+            <li><a href="index.html">Work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+	  </div> <!-- end page wrapper -->
+	</header>
+
+	
+	<main id="main">
+	 <div class="page-wrapper">
+	 <h1 class="page-title">Animation Example</h1>
+	 <div id="animation-cont">
+	 	<div class="timer"><span class="timer-animation"></span></div>
+  		<div id="finish" class="gameover">
+  			GAME OVER
+			<button id="retry" class="try-again">Try again!</button>
+  		</div>
+
+	   	<div id="clouds">
+			<div class="cloud cloud1"></div>
+			<div class="cloud cloud2"></div>
+			<div class="cloud cloud3"></div>
+			<div class="cloud cloud4"></div>
+			<div class="cloud cloud5"></div>
+		</div>
+		<div>
+		  	<input class="input-circle input-circle1" type="radio" id="circle1" >
+			<input class="input-circle input-circle2" type="radio" id="circle2" >
+			<input class="input-circle input-circle3" type="radio" id="circle3" >
+			<input class="input-circle input-circle4" type="radio" id="circle4" >
+			<input class="input-circle input-circle5" type="radio" id="circle5" >
+			<input class="input-circle input-circle6" type="radio" id="circle6" >
+			  
+			<label for="circle1" class="bird bird1">
+				<span></span>
+ 				<b class="eye left"></b>
+  				<b class="eye right"></b>
+			</label>
+			<label for="circle2" class="bird bird2">
+				<span></span>
+ 				<b class="eye left"></b>
+  				<b class="eye right"></b>
+			</label>
+			<label for="circle3" class="bird bird3">
+				<span></span>
+ 				<b class="eye left"></b>
+  				<b class="eye right"></b>
+  			</label>
+			<label for="circle4" class="bird bird4">
+			<span></span>
+ 				<b class="eye left"></b>
+  				<b class="eye right"></b>
+  			</label>
+			<label for="circle5" class="bird bird5">
+			<span></span>
+ 				<b class="eye left"></b>
+  				<b class="eye right"></b>
+  			</label>			
+			<label for="circle6" class="bird bird6">
+			<span></span>
+ 				<b class="eye left"></b>
+  				<b class="eye right"></b>
+  			</label>			
+			<div class="sum">SCORE:</div>
+		</div>
+	</div>
+	</div> <!-- end page wrapper for main -->
+</main>
+	
+	<footer id="footer">
+		<div class="page-wrapper">
+		<h2 class="hidden">Footer info</h2>
+	  		<div class="columns-footer">
+	    		<aside class="col-3">
+		  			<h2>About me</h2>
+		  			<p>There will be some information about me and my experience.</p>
+	    		</aside>
+	    		<aside class="col-3"> 
+		  			<h2>Send Email</h2>
+		  			<form id="sendmsg" action="index.html" method="post">
+						<div>
+							<label for="email"> Email address:</label>
+						</div>
+						<div>
+							<input type="text" id="email" name="user_email"/>
+						</div>
+						<div>
+							<label for="message">Your message:</label>
+						</div>
+						<div>
+							<textarea id="message" name="user_msg"></textarea>
+						</div>
+						<div>
+							<button type="submit" name="submit">Send Message</button>
+						</div>
+					</form>
+	    		</aside>
+	    		<aside class="col-3"> 
+		  			<h2>Follow me</h2>
+		  			<img src="images/twit.png" alt="Logo of twiter" />
+		  			<img src="images/in.png" alt="Logo of in" />
+	    		</aside>
+	   	    </div> <!-- end of columns -->	
+	 	</div> <!-- end page wrapper -->
+	</footer>
+  </body>
+</html>

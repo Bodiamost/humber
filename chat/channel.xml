@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<channel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="channel.xsd">
+  <roomid>1</roomid>
+  <roomname>Conversation</roomname>
+  <status>open</status>
+  <nmbofmembers>5</nmbofmembers>
+  <members>
+    <member id="1">
+      <firstname>Bohdan</firstname>
+      <lastname>Mostytskyy</lastname>
+      <email>bodiamost@gmail.com</email>
+      <nickname>bodiamost</nickname>
+    </member>
+    <member id="2">
+      <firstname>John</firstname>
+      <lastname>Smith</lastname>
+      <email>johnsmith@gmail.com</email>
+      <nickname>john1990</nickname>
+    </member>
+    <member id="3">
+      <firstname>Roman</firstname>
+      <lastname>Antonov</lastname>
+      <email>admin@gmail.com</email>
+      <nickname>member10200</nickname>
+    </member>
+    <member id="4">
+      <firstname>Joanna</firstname>
+      <lastname>Kommala</lastname>
+      <email>joannakommala@gmail.com</email>
+      <nickname>joannakommala</nickname>
+    </member>
+    <member id="5">
+      <firstname>Joanna</firstname>
+      <lastname>Kommala</lastname>
+      <email>joanna.kommala@humber.ca</email>
+      <nickname>joanna.kommala</nickname>
+    </member>
+  </members>
+  <messages>
+    <message id="1" status="open">
+      <sender>1</sender>
+      <time>10:05:34 AM</time>
+      <date>11 Feb 2017</date>
+      <text>Good morning!</text>
+    </message>
+    <message id="3" status="open">
+      <sender>1</sender>
+      <time>10:10:34 AM</time>
+      <date>11 Feb 2017</date>
+      <text>Is this chanel private?</text>
+    </message>
+    <message id="4" status="open">
+      <sender>3</sender>
+      <time>10:12:27 AM</time>
+      <date>11 Feb 2017</date>
+      <text>No.It is open.</text>
+    </message>
+    <message id="5" status="open">
+      <sender>1</sender>
+      <time>10:22:22 AM</time>
+      <date>11 Feb 2017</date>
+      <text>Thanks, goodbye!</text>
+    </message>
+    <message id="15" status="open">
+      <sender>joanna.kommala</sender>
+      <time>3:16:36 PM</time>
+      <date>01 May </date>
+      <text><![CDATA[hello]]></text>
+    </message>
+    <message id="16" status="open">
+      <sender>joannakommala</sender>
+      <time>3:17:58 PM</time>
+      <date>01 May </date>
+      <text><![CDATA[hi]]></text>
+    </message>
+    <message id="17" status="open">
+      <sender>joanna.kommala</sender>
+      <time>3:19:18 PM</time>
+      <date>01 May </date>
+      <text><![CDATA[hello]]></text>
+    </message>
+    <message id="18" status="open">
+      <sender>joanna.kommala</sender>
+      <time>3:19:31 PM</time>
+      <date>01 May </date>
+      <text><![CDATA[good morning]]></text>
+    </message>
+    <message id="39" status="deleted">
+      <sender>Root</sender>
+      <time>10:34:09 PM</time>
+      <date>21 May </date>
+      <text><![CDATA[Welcome]]></text>
+    </message>
+    <message id="40" status="deleted">
+      <sender>Root</sender>
+      <time>10:35:37 PM</time>
+      <date>21 May </date>
+      <text><![CDATA[H]]></text>
+    </message>
+    <message id="41" status="deleted">
+      <sender>Root</sender>
+      <time>10:35:43 PM</time>
+      <date>21 May </date>
+      <text><![CDATA[Ffd]]></text>
+    </message>
+    <message id="42" status="deleted">
+      <sender>Root</sender>
+      <time>10:35:46 PM</time>
+      <date>21 May </date>
+      <text><![CDATA[Ddd]]></text>
+    </message>
+    <message id="43" status="deleted">
+      <sender>Root</sender>
+      <time>10:35:58 PM</time>
+      <date>21 May </date>
+      <text><![CDATA[Hhs]]></text>
+    </message>
+    <message id="44" status="deleted">
+      <sender>boot</sender>
+      <time>10:39:34 PM</time>
+      <date>21 May </date>
+      <text><![CDATA[good]]></text>
+    </message>
+    <message id="45" status="deleted">
+      <sender>1</sender>
+      <time>10:39:42 PM</time>
+      <date>21 May </date>
+      <text><![CDATA[Ok]]></text>
+    </message>
+  </messages>
+</channel>
